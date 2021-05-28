@@ -1,4 +1,4 @@
-FROM adoptopenjdk:8-jre-openj9 AS build
+FROM gradle:jre8-hotspot AS build
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 RUN gradle build --no-daemon
