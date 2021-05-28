@@ -32,8 +32,6 @@ jobs:
           docker push ${{ secrets.REGISTRY }}:latest
 
 
-
-
   pull-docker:
     needs: [build]
     name: Pull Docker
