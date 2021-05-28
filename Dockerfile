@@ -1,4 +1,4 @@
-FROM gradle:jre8-hotspot AS build
+FROM gradle:7.0.2-jdk8 AS build
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 RUN gradle build --no-daemon
