@@ -21,6 +21,7 @@ jobs:
       - name: Build with Gradle
         # 这里maven的打包命令, 其他项目修改为对应的打包命令
         run: |
+          chmod +x gradlew
           ./gradlew bootJar
       - name: Push Docker
         run: |
